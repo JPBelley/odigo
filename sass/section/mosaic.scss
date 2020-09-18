@@ -1,8 +1,13 @@
 .mosaic {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-gap: 0.625rem;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 0.625rem 0;
   margin-top: 2.1875rem;
+
+  @media (min-width: $medium) {
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 0.625rem;
+  }
   
   .col-span-2 {
     height: 18rem;
@@ -28,8 +33,11 @@
 }
 
 .mosaic__header {
-  display: flex;
-  justify-content: space-between;
+  
+  @media (min-width: $small) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .mosaic__title {

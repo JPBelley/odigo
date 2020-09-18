@@ -1,8 +1,12 @@
 header {
   position: absolute;
-  padding: 3.75rem 5.625rem;;
+  padding: 1.875rem 1.5rem;;
   width: 100%;
   z-index: 100;
+
+  @media (min-width: $medium) {
+    padding: 3.75rem 5.625rem;;
+  }
 }
 
 .header__container {

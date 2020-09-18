@@ -1,3 +1,4 @@
+// Colors used 
 $black: #000;
 $white: #fff;
 $gray: #979797;
@@ -6,8 +7,15 @@ $lightBlue: #006DFE;
 $darkBlue: #1B7DFF;
 $red: #e63946;
 
+// Media queries
+$small: 600px;
+$medium: 800px;
+$large: 1200px;
+
 $animbezier: cubic-bezier(.45,.35,.25,1);
 
+
+// Mixin
 @mixin underline-hover {
     background-image: linear-gradient(to bottom, transparent calc(100% - 1px), $white calc(100% - 1px), $white calc(100%));
     background-repeat: no-repeat;

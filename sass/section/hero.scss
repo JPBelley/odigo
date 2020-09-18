@@ -20,12 +20,19 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: calc(110vh - 20rem);
+  height: calc(110vh - 10rem);
+  
+  @media (min-width: $medium) {
+    height: calc(110vh - 20rem);
+  }
 }
 
 .hero__content {
   max-width: 35rem;
-  margin-left: 4.6875rem;
+  
+  @media (min-width: $medium) {
+    margin-left: 4.6875rem;
+  }
 
   p {
     margin-top: 1.6rem;
@@ -33,9 +40,19 @@
 
   form {
     margin-top: 3.5rem;
+    margin-bottom: 0;
+    
+    @media (min-width: $medium) {
+      display: flex;
+    }
   }
 
   input {
     margin-right: 2rem;
+    margin-bottom: 1rem;
+
+    @media (min-width: $medium) {
+      margin-bottom: 0;
+    }
   }
 }

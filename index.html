@@ -1,6 +1,9 @@
 <html>
   <head>
-  <title>Title</title>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Title</title>
+      <link rel="icon" href="./images/favicon.png" type="image/icon">
   </head>
 <body>
   <header>
@@ -28,6 +31,7 @@
           <form action="/thanks" id="formEmail">
             <input type="text" placeholder="Enter your email" id="emailInput" />
             <button class="button button--blue" type="submit" id="emailSubmitButton">Get started</button>
+            <div class="form-error">Entrez un courriel valide</div>
           </form>
         </div>
       </div> 
@@ -215,3 +219,14 @@
   </svg>
 </body>
 </html>
+
+
+<!--
+Je laisse quelques pensées ici: 
+
+J'ai vu les utilities: 
+  -> J'y suis davantage allé en BEM par habitude et pour la rapidité de code, je suis conscient que cette stratégie peut diminuer de beaucoup le css. 
+  -> Le view more sur mobile, je l'aurais peut-être placer après le contenu (À discuter avec le ux)
+  -> J'ai peut-être un peu trop compressé les images #sorry
+  -> Je n'ai pas edge, mais je crois n'avoir utilisé que des propriétés compatible
+-->

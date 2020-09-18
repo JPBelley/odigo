@@ -4,10 +4,15 @@ body {
 
 h1,
 .typo--h1 {
-	font-size: 3.125rem;
+	font-size: 1.875rem;
+	line-height: 2.125rem;
 	font-weight: 700;
-	line-height: 3.75rem;
 	color: $white;
+  
+  @media (min-width: $medium) {
+    font-size: 3.125rem;
+	  line-height: 3.75rem;
+  }
 }
 
 h2,
@@ -18,8 +23,8 @@ h2,
 
 h3,
 .typo--h3 {
-	// font-size: 2.1875rem;
-	// font-weight: 700;
+	font-size: 1.75rem;
+	font-weight: 700;
 }
 
 h4,
@@ -53,7 +58,9 @@ h4,
   align-items: center;
   color: $lightBlue;
   text-transform: uppercase;
-	transition: color 200ms $animbezier;
+  transition: color 200ms $animbezier;
+  white-space: nowrap;
+  margin: .5rem 0;
 
   svg {
     fill: $darkBlue;
@@ -80,12 +87,21 @@ h4,
 }
 
 .container--section {
-	padding-top: 6.25rem;
-	padding-bottom: 6.25rem;
+	padding-top: 3.125rem;
+	padding-bottom: 3.125rem;
+  
+  @media (min-width: $medium) {
+  	padding-top: 6.25rem;
+	  padding-bottom: 6.25rem;
+  }
 }
 
 .section {
-	padding: 0 5.625rem;
+  padding: 0 1.5rem;
+  
+  @media (min-width: $medium) {
+	  padding: 0 5.625rem;
+  }
 }
 
 input {
@@ -94,15 +110,36 @@ input {
 	border-bottom: 2px solid $lightGray;
 	color: $white;
 	padding-bottom: 1rem;
-	min-width: 20rem;
+  
+  @media (min-width: $medium) {
+    min-width: 20rem;
+  }
 
 	&::placeholder {
 		color: currentColor;
-	}
+  }
+}
+
+form {
+  position: relative;
 }
 
 .form-error {
   position: absolute;
   color: $red;
   padding-top: .5rem;
+  bottom: -1.875rem;
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(-2%, -25%);
+  transition: 
+    opacity 200ms $animbezier,
+    transform 200ms $animbezier,
+    visibility 200ms $animbezier;
+
+  &.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(0%, 0%);
+  }
 }

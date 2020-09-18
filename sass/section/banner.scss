@@ -2,15 +2,24 @@
   background-color: transparent;
 
   .container {
-    margin-top: -20rem;
+    margin-top: -10rem;
     // border: 1px solid $gray; // J'aurais besoin de parler avec le design pour savoir si c'est vraiment là ;)
+    
+    @media (min-width: $medium) {
+      margin-top: -20rem;
+    }
   }
 }
 
 .banner__content {
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
   padding: 5rem 4.6875rem 0;
+  
+  @media (min-width: $medium) {
+    flex-direction: row;
+  }
 
   .icon {
     width: 4rem;
@@ -21,6 +30,16 @@
 
 .benefit {
   max-width: 330px;
+  padding: 0 1rem;
+  margin: 0 auto;
+
+  + .benefit {
+    margin-top: 2rem;
+
+    @media (min-width: $medium) {
+      margin-top: 0;
+    }
+  }
 }
 
 .benefit__name {
