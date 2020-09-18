@@ -1,0 +1,32 @@
+.section-banner {
+  background-color: transparent;
+
+  .container {
+    margin-top: -20rem;
+    // border: 1px solid $gray; // J'aurais besoin de parler avec le design pour savoir si c'est vraiment là ;)
+  }
+}
+
+.banner__content {
+  display: flex;
+  justify-content: space-between;
+  padding: 5rem 4.6875rem 0;
+
+  .icon {
+    width: 4rem;
+    max-height: 4rem;
+    margin: 0 auto;
+  }
+}
+
+.benefit {
+  max-width: 330px;
+}
+
+.benefit__name {
+  margin-top: 2.5rem;
+}
+
+.benefit__description {
+  margin-top: 1rem;
+}

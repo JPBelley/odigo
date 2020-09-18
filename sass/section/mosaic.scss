@@ -1,0 +1,19 @@
+.mosaic {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 0.625rem;
+  margin-top: 2.1875rem;
+  
+  .col-span-2 {
+    height: 18rem;
+  }
+  
+  .col-span-3 {
+    height: 22.5rem;
+  }
+}
+
+.mosaic__img {
+  width: 100%;
+  object-fit: cover;
+}
