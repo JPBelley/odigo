@@ -19,6 +19,7 @@ const init = () => {
 				const email = emailInput.value;
 				const formError = form.querySelector('.form-error');
 				formError.classList.remove('show'); 
+				formError.textContent = email.length ? 'Entrez un courriel valide svp' : 'Entrez un courriel svp'
 
 				const isEmailLegit = isLegit(email);
 
