@@ -1,4 +1,108 @@
-// .container {
-//   margin: 0 auto;
-//   max-width: 1200;
-// }
+body {
+	font-family: 'Lato', 'helvetica', sans-serif;
+}
+
+h1,
+.typo--h1 {
+	font-size: 3.125rem;
+	font-weight: 700;
+	line-height: 3.75rem;
+	color: $white;
+}
+
+h2,
+.typo--h2 {
+	font-size: 2.1875rem;
+	font-weight: 700;
+}
+
+h3,
+.typo--h3 {
+	// font-size: 2.1875rem;
+	// font-weight: 700;
+}
+
+h4,
+.typo--h4 {
+  font-size: 1.125rem;
+	font-weight: 700;
+	line-height: 1.5rem;
+}
+
+.button {
+	font-size: 1.25rem;
+	font-weight: 700;
+	padding: 0.5rem 1.5rem;
+	border-radius: 0.25rem;
+	opacity: 1;
+	transition: background-color 200ms $animbezier;
+  
+  &--blue {
+    background-color: $darkBlue;
+    
+    @media (hover: hover) {
+      &:hover {
+        background-color: darken($darkBlue, 10%);
+      }
+    }
+  }
+}
+
+.button-arrow {
+  display: flex;
+  align-items: center;
+  color: $lightBlue;
+  text-transform: uppercase;
+	transition: color 200ms $animbezier;
+
+  svg {
+    fill: $darkBlue;
+    width: 2rem;
+    height: 0.5rem;
+    margin-left: 1rem;
+    transform: translateX(0);
+    transition: transform 200ms $animbezier;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      color: darken($lightBlue, 20%);
+
+      svg {
+        transform: translateX(0.25rem);
+      }
+    }
+  }
+}
+
+.container {
+	margin: 0 auto;
+}
+
+.container--section {
+	padding-top: 6.25rem;
+	padding-bottom: 6.25rem;
+}
+
+.section {
+	padding: 0 5.625rem;
+}
+
+input {
+	font-weight: 700;
+	background-color: transparent;
+	border-bottom: 2px solid $lightGray;
+	color: $white;
+	padding-bottom: 1rem;
+	min-width: 20rem;
+
+	&::placeholder {
+		color: currentColor;
+	}
+}
+
+.form-error {
+  position: absolute;
+  color: $red;
+  padding-top: .5rem;
+}

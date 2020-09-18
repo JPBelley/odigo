@@ -44,6 +44,10 @@ footer {
 
 .footer__col {
   padding-right: 100px;
+
+  a {
+    @include underline-hover;
+  }
 }
 
 .footer__info {

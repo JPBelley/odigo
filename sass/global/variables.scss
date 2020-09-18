@@ -1,3 +1,26 @@
 $black: #000;
 $white: #fff;
 $gray: #979797;
+$lightGray: #BFC0C5;
+$lightBlue: #006DFE;
+$darkBlue: #1B7DFF;
+$red: #e63946;
+
+$animbezier: cubic-bezier(.45,.35,.25,1);
+
+@mixin underline-hover {
+    background-image: linear-gradient(to bottom, transparent calc(100% - 1px), $white calc(100% - 1px), $white calc(100%));
+    background-repeat: no-repeat;
+    background-size: 0;
+    background-position: right bottom;
+    transition: background-size 200ms $animbezier;
+    padding-bottom: 2px;
+
+  @media (hover: hover) {
+    &:hover {
+      background-image: linear-gradient(to bottom, transparent calc(100% - 1px), $white calc(100% - 1px), $white calc(100%));
+      background-size: 100%;
+      background-position: left bottom;
+    }
+  }
+}

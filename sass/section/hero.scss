@@ -1,6 +1,7 @@
 .hero {
-  height: 100vh;
+  height: 110vh;
   position: relative;
+  color: $white;
 }
 
 .hero__bg {
@@ -9,4 +10,32 @@
   height: 100%;
   object-fit: cover;
   z-index: -1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.hero__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: calc(110vh - 20rem);
+}
+
+.hero__content {
+  max-width: 35rem;
+  margin-left: 4.6875rem;
+
+  p {
+    margin-top: 1.6rem;
+  }
+
+  form {
+    margin-top: 3.5rem;
+  }
+
+  input {
+    margin-right: 2rem;
+  }
 }

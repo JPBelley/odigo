@@ -1,0 +1,24 @@
+header {
+  position: absolute;
+  padding: 3.75rem 5.625rem;;
+  width: 100%;
+  z-index: 100;
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main__nav {
+
+  li {
+    margin-left: 2.5rem;
+  }
+  
+  a {
+    font-weight: 700;
+    line-height: 1.5rem;
+    @include underline-hover;
+  }
+}
